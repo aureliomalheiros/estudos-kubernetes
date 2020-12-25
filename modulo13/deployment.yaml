@@ -1,17 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: deployment
+  name: api
 spec:
-  replicas: 5
   selector:
     matchLabels:
-      app: exemplo
+      app: api
   template:
     metadata:
       labels:
-        app: exemplo
+        app: api
     spec:
       containers:
-      - name: meucontainer
-        image: kubedevio/nginx-color:green
+      - name: api
+        image: kubedevio/api-conversao:v1-machine-name
