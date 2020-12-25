@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: pod-kubedev-label
+    labels:
+       app: nginx
+       versao: verde
+spec:
+    containers:
+    - name: container-kubedev
+      image: kubedevio/nginx-color:green
